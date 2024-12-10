@@ -1,4 +1,6 @@
+require ('dotenv').config();
 const express=require("express");
+
 const cors=require('cors')
 require("./db/config");
 const User=require("./db/User");
@@ -87,6 +89,6 @@ app.get("/search/:key",async   (req,res)=>{
   res.send(result);
 })
 
-app.listen(5000,()=>{
+app.listen(process.env.PORT,()=>{
   console.log("server is running on http://localhost:5000")
 });
