@@ -9,6 +9,7 @@ const Nav = () => {
     localStorage.clear();
     navigate('/signup')
   }
+  
   return (
     <div>
       <img id='logo' alt='logo' src='https://download.logo.wine/logo/Shopify/Shopify-Logo.wine.png'/>
@@ -18,7 +19,9 @@ const Nav = () => {
       <ul className="nav-ul">
       <li><Link to="/">Products</Link></li>
       <li><Link to="/add">Add Products</Link> </li>
-      <li><Link to="/update/:id">Update Products</Link> </li>
+  
+      {/* <li><Link to="/update/:id">Update Products</Link> </li> */}
+      {/* <li><Link onClick={update} to="/">Products ({JSON.parse(auth).name})</Link></li> */}
       <li><Link onClick={logout} to="/signup">logout ({JSON.parse(auth).name})</Link></li>
       </ul>
         :
