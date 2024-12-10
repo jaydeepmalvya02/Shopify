@@ -7,7 +7,7 @@ const ProductList = () => {
     getProducts();
   },[])
   const getProducts=async ()=>{
-    let result= await fetch('http://localhost:5000/products')
+    let result= await fetch('https://shopify-dash.onrender.com/products')
     result=await result.json();
 
     setProucts(result);

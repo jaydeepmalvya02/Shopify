@@ -15,7 +15,7 @@ const SignUp = () => {
   },[])
   const collectData= async()=>{
     console.warn(name,email,password);
-    let result= await fetch("http://localhost:5000/register",{method:'post',
+    let result= await fetch("https://shopify-dash.onrender.com/register",{method:'post',
       body: JSON.stringify({name,email,password}),
       headers:{
         'content-type':'application/json'
